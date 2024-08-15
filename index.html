@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!-- Linking Tailwind CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-custom-light">
+    <div class="container mx-auto p-4 max-w-screen-lg">
+        <!-- Main heading of the application -->
+        <h1 class="text-4xl font-bold text-center text-custom-dark mb-6">Weather Dashboard</h1>
+        <div class="bg-custom-white rounded-lg shadow-lg p-6">
+            <!-- Input field and buttons for searching weather by city or current location -->
+            <div class="mb-6">
+                <input type="text" id="cityInput" class="p-3 border rounded w-full bg-custom-gray text-custom-dark" placeholder="Enter a City Name (e.g., New York, London, Tokyo)">
+                <button id="searchBtn" class="mt-4 p-3 bg-custom-blue text-custom-white rounded w-full">Search</button>
+                <button id="currentLocationBtn" class="mt-2 p-3 bg-custom-gray text-custom-dark rounded w-full">Use Current Location</button>
+            </div>
+            <!-- Dropdown menu for recently searched cities -->
+            <div id="recentSearches" class="mb-6">
+                <!-- Dropdown for recently searched cities -->
+            </div>
+            <!-- Section to display the current weather information -->
+            <div id="weatherDisplay" class="p-6 bg-custom-light rounded shadow">
+                <h2 class="text-2xl font-bold text-custom-dark">Location: <span id="location"></span></h2>
+                <p class="text-lg text-custom-dark">Temperature: <span id="temperature"></span>°C</p>
+                <p class="text-lg text-custom-dark">Wind: <span id="wind"></span> M/S</p>
+                <p class="text-lg text-custom-dark">Humidity: <span id="humidity"></span>%</p>
+                <div id="weatherIcon" class="mt-4">
+                    <!-- Weather icon will be displayed here -->
+                </div>
+            </div>
+            <!-- Section to display the 5-day weather forecast -->
+            <h3 class="mt-6 text-xl font-bold text-custom-dark">5-Day Forecast</h3>
+            <div id="forecast" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-4">
+                <!-- Forecast data will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <!-- Linking the JavaScript file for functionality -->
+    <script src="js/app.js"></script>
+</body>
+</html>

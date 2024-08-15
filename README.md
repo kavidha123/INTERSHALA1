@@ -1,7 +1,4 @@
 
-
-https://github.com/kavidha123/INTERSHALA1/
-
 # Weather Forecast Application
 
 ## Overview
